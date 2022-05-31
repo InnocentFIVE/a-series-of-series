@@ -115,7 +115,7 @@
 	\forall \varepsilon \left(\exists N\left(\forall n,m>N\left(\left\vert \sum\limits_{m}^{n} a_{\diamond } \right\vert<\varepsilon   \right) \right) \right) \iff \sum a_{\diamond } \longrightarrow a
 	.\]
 
-	为了简写记作 \(\sum^{\longrightarrow} a_{\diamond }\)
+	为了简写记作 \(\sum^{\longrightarrow} a_{\diamond }\)，
 在这里无穷级数的和定义为部分和的极限：
 \[
 	\sum a_{\diamond }\coloneq\lim \sum^n a_{\diamond }
@@ -260,9 +260,24 @@
 
 \paragraph{Weierstrass判别法}
 \[
-	\sum^\longrightarrow\sup_{x \in\symcal{I} }|f_\diamond (x)| \implies\sum^{\longrightrightarrows}_{x\in\symcal I} f_\diamond (x)  
+	\sum^\longrightarrow\sup_{x \in\symcal{I} }|f_\diamond (x)| \implies\sum^{\slongrightrightarrows}_{x\in\symcal I} f_\diamond (x)  
 .\]
 
+\paragraph{Dirichlet判别}
+
+若 \(f_n(x)\) 对 \(n\) 单调
+\[
+\exists M\left(\forall n\left(\forall x\in\symcal{I} \left(\left|\sum^n g_\diamond (x)\right|<M\right)\right)\right)\land f_\diamond (x)\longrightrightarrows 0\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
+.\]
+
+其中我们称 \(\exists M\left(\forall n\left(\forall x\in\symcal{I} \left(\left|\sum^n g_\diamond (x)\right|<M\right)\right)\right)\) 为 \(g_\diamond (x)\) 的部分和在 \(\symcal{I} \) 上一致有界。
+
+\paragraph{Abel 判别}
+
+若 \(f_n(x)\) 对 \(n\) 单调且在  \(\symcal{I} \) 上一致有界，则：
+\[
+\sum^{\slongrightrightarrows} b_\diamond (x)\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
+.\]
 \end{document}
 
 
