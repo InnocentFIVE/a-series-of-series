@@ -1,0 +1,268 @@
+\documentclass[UTF8,15pt,fleqn]{article}
+\usepackage{ctex}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{upgreek}
+\usepackage{graphicx}
+\usepackage[b5paper,scale=0.75]{geometry}
+\usepackage{unicode-math}
+\usepackage{tcolorbox}
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{extarrows}
+\usepackage{pxrubrica}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{ulem}
+\usepackage{wallpaper}
+
+\usetikzlibrary{patterns}
+\tcbuselibrary{skins} 
+\tcbuselibrary{breakable}
+\pagestyle{fancy}
+\setmainfont{EB Garamond}[Ligatures=Rare]
+\setmathfont{Garamond-Math.otf}[StylisticSet={2, 7, 9}]
+\setmathfont{Garamond-Math.otf}[StylisticSet={2, 7, 9, 8}, version=a]
+\setmathfont[range = "0211C]{Latin Modern Math}
+\newcommand{\longrightrightarrows}{\mathrel{\raisebox{-0.43ex}{$\longrightarrow$} \kern-1.498em\raisebox{0.43ex}{$\longrightarrow$}}}
+\newcommand{\slongrightrightarrows}{\mathrel{\raisebox{-0.301ex}{$\scriptstyle\longrightarrow$} \kern-1.0486em\raisebox{0.301ex}{$\scriptstyle\longrightarrow$}}}
+\newcommand{\snlongrightrightarrows}{\mathrel{\raisebox{-0.301ex}{$\scriptstyle\not\longrightarrow$} \kern-1.0486em\raisebox{0.301ex}{$\scriptstyle\longrightarrow$}}}
+\newcommand{\nlongrightrightarrows}{\mathrel{\raisebox{-0.43ex}{$\not\longrightarrow$} \kern-1.498em\raisebox{0.43ex}{$\longrightarrow$}}}
+\xeCJKDeclareSubCJKBlock{symbolCJK}{"3001}
+\setCJKmainfont[symbolCJK=Source Han Serif SC, BoldFont = GenYoMin TW B]{GenWanMin TW TTF}
+\everymath{\displaystyle}
+\fancypagestyle{forsection}
+{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[RO]{\vskip-8em\rotatebox[origin=rb]{-90}{{\LARGE\char"2619}\enspace{\bfseries\Roman{page}}\enspace{\LARGE\char"2767}}\kern-3em}
+\fancyfoot[LE]{\vskip-8em\hspace{-3em}\rotatebox[origin=lb]{90}{{\LARGE\char"2619}\enspace{\bfseries\Roman{page}}\enspace{\LARGE\char"2767}}}
+\fancyfoot[C]{}
+\fancyhead[C,L,R]{}
+}
+
+\newCJKfontfamily\kaiti{TW-Kai}
+\catcode`\，=13
+\def，{, }
+\catcode`\。=13
+\def。{. }
+\catcode`\：=13
+\def：{: }
+\catcode`\；=13
+\def；{; }
+\catcode`\！=13
+\def！{\,!\,}
+\catcode`\？=13
+\def？{\,?\kern0.5em}
+\catcode`\（=13
+\def（{\raisebox{0.28ex}{\,(}}
+\catcode`\）=13
+\def）{\raisebox{0.28ex}{)\,}}
+\catcode`\“=13
+\def“{``}
+\catcode`\”=13
+\def”{''}
+\catcode`\、=13
+\def、{\mbox{\char"3001\kern-0.35em}}
+\catcode`\「=13
+\def「{\mbox{\kern-0.35em\char"300C}}
+\catcode`\」=13
+\def」{\mbox{\char"300D\kern-0.35em}}
+
+\fancyfoot[RO]{\vskip-8em\rotatebox[origin=r]{-90}{{\LARGE ☙}\enspace{\bfseries\Roman{page}}\enspace{\LARGE ❧}}\kern-2.5em}
+\fancyfoot[LE]{\vskip-8em\hspace{-2.5em}\rotatebox[origin=l]{90}{{\LARGE ☙}\enspace{\bfseries\Roman{page}}\enspace{\LARGE ❧}}}
+\fancyfoot[C]{}
+\defaultfontfeatures{RawFeature={+calt,+swsh,+liga,+hlig,+clig,+dlig,+tnum,+lnum}}
+\titleformat{\section}[display]
+{}{\newpage\thispagestyle{forsection}
+	\filright{\hrule width 1cm\vskip-1.95em}\hspace*{1cm}
+	\enspace
+	{\LARGE\char"E001}
+	\enspace
+	\raisebox{0.8ex}{$\underset{\mbox{\tiny\textit{SECTION}}}{\textbf{\textit{\Huge{\arabic{section}}}}}$}
+	\enspace{\LARGE\char"E002}
+	\enspace
+	\titlerule}{1em}{\vspace{-3ex}\Large\bfseries\rightline}
+
+\titleformat{\subsection}[hang]
+{}{\normalsize\filright\raisebox{-1.3ex}{\huge\char"B6}\kern-2.3ex{\color{white}\normalsize\arabic{subsection}}\enspace}{0.5em}{\normalsize\bfseries}
+
+
+\begin{document}
+\setlength{\lineskip}{5pt}
+\setlength{\lineskiplimit}{2.5pt}
+\thispagestyle{empty}
+
+
+\let\symcal\undefined
+\DeclareRobustCommand{\symcal}[1]{{\mathpalette\youwillneverusethisnamewhichaboutchi{#1}}}
+\newcommand{\youwillneverusethisnamewhichaboutchi}[2]{\mbox{\mathversion{a}$#1\symscr{#2}$}}
+% \renewcommand{\symcal}[1]{{\mathversion{a}\mbox{$\symscr{#1}$}}}
+
+
+
+\ThisTileWallPaper{\paperwidth}{\paperheight}{cover.pdf}
+\phantom{d}
+\newpage
+
+
+\subsection{NONSENCE}
+
+\paragraph{Cauthy收敛定理}
+\[
+	\forall \varepsilon \left(\exists N\left(\forall n,m>N\left(\left\vert \sum\limits_{m}^{n} a_{\diamond } \right\vert<\varepsilon   \right) \right) \right) \iff \sum a_{\diamond } \longrightarrow a
+	.\]
+
+	为了简写记作 \(\sum^{\longrightarrow} a_{\diamond }\)
+在这里无穷级数的和定义为部分和的极限：
+\[
+	\sum a_{\diamond }\coloneq\lim \sum^n a_{\diamond }
+	.\]
+显然
+\[
+	\lim a_{\diamond }\neq 0\implies\sum ^{\not\longrightarrow}a_{\diamond } 
+	.\]
+
+\begin{itemize}
+	\item 比如 \(\sum^{\not\longrightarrow} (-)^{\diamond }\) 。
+\end{itemize}
+
+另，级数是否收敛只取决与无穷远处的形状，与有限处无关。
+
+\subsection{审敛}
+
+{\kaiti 为了方便记忆，以下审敛法都写成极限形式，这意味着判别力比原来要弱。}
+
+
+\paragraph{比较判别}
+若\(	|a_n| = \symcal O(|b_n|)\)，
+则：
+\[
+	\begin{aligned}
+		\sum^{ \not\longrightarrow} |a_\diamond|\implies \sum^{ \not\longrightarrow} |b_\diamond| , \\
+		\sum ^{\longrightarrow }|b_\diamond| \implies \sum^{ \longrightarrow} |a_\diamond| .
+	\end{aligned}
+\]
+
+\paragraph{ \(p\) 级数法}
+
+\[
+	\sum^\longrightarrow \frac{1}{\diamond^n },\, \text{iff}\ \Re(n)>1 ,\,\text{otherwise\ }\sum^{\not\longrightarrow } \frac{1}{\diamond^n }
+	.\]
+
+\paragraph{D'Alembert审敛}
+
+若
+\[
+	\begin{aligned}
+		 & \limsup\left|\frac{a_{\diamond +1}}{a_\diamond }\right| <1 \implies\sum ^{ \longrightarrow}a_\diamond, \\
+		 & \liminf\left|\frac{a_{\diamond +1}}{a_\diamond }\right| >1 \implies\sum^{\not\longrightarrow} a_\diamond. \\
+		 & \mbox{\kaiti 否则不能判定}  .
+	\end{aligned}
+\]
+
+\paragraph{Cauthy审敛}
+若
+\[
+	\begin{aligned}
+		 & \limsup\left| \sqrt[\diamond ]{a_\diamond }\right|<1\implies \sum^{\longrightarrow} a_\diamond ,  \\
+		 & \liminf\left| \sqrt[\diamond ]{a_\diamond }\right| >1 \implies\sum^{\not\longrightarrow} a_\diamond, \\
+		 & \mbox{\kaiti 否则不能判定}  .
+	\end{aligned}
+\]
+
+\paragraph{Raabe审敛}
+
+若
+\[
+	\begin{aligned}
+		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) > 1 \implies\sum^{\longrightarrow} a_\diamond  , \\
+		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) < 1 \implies\sum ^{\not\longrightarrow}a_\diamond,  \\
+		 & \mbox{\kaiti 否则不能判定}  .
+	\end{aligned}
+\]
+
+\paragraph{积分判别法}
+
+\[
+	\forall x\geqslant 1	(f(x)\searrow \land f(x)>0) \implies \sum f(\diamond )\,\mbox{\kaiti 与}  \, \int_1^\infty f(x)\,\mathrm{d}x \,\mbox{\kaiti 共敛散}
+	.\]
+
+
+\paragraph{Leibniz审敛}
+
+\[
+	\forall x\geqslant 1	(f(x)\searrow \land f(x)>0\land \lim f(x)=0) \implies \sum  ^\longrightarrow (-)^\diamond f(\diamond ) 
+	.\]
+
+\paragraph{Dirichlet审敛}
+若 \(a_\diamond \)单调，则：
+\[
+\exists M\left( \left\vert \sum^n b_\diamond  \right\vert <M(\lim a_\diamond =0)\right) \implies \sum^\longrightarrow   a_\diamond b_\diamond  
+.\]
+
+\paragraph{Abel审敛}
+
+若 \(a_\diamond \)单调，\(\sum ^{\longrightarrow}b_\diamond \) ，则：
+\[
+\exists M(a_\diamond <M)\implies\sum^{\longrightarrow} a_\diamond b_\diamond  .
+\]
+
+\paragraph{Ermakov审敛}
+
+\[
+\begin{aligned}
+&\exists F(\forall x>F(f(x)\searrow\land f(x)>0))\land\exists G(\forall x>G(g(x)\nearrow\land g(x)>\land g(x)\in\symcal C^1)) \\ 
+&\implies\exists X\left(\forall x>X\left( \begin{aligned}
+ &\frac{f(g)g'}{f}\leqslant q<1\implies\sum^\longrightarrow f(\diamond ) \\ 
+&\frac{f(g)g'}{g} \geqslant 1\implies\sum^{\not\longrightarrow}f(\diamond )
+\end{aligned} \right)  \right) .
+\end{aligned}
+\]
+
+\paragraph{Cauthy的凝聚判别}
+
+\[
+\exists N(n>N(a_n\searrow\land a_n\geqslant 0))\implies \sum a_\diamond\,\mbox{\kaiti 与}  \,\sum 2^\diamond a_{2^\diamond } \,\mbox{\kaiti 共敛散} 
+.\]
+\subsection{绝对与条件收敛}
+\[
+	\begin{aligned}
+		 & \sum^\longrightarrow |a_\diamond |\eqcolon \sum a_\diamond  \mbox{\kaiti 绝对收敛}  ,                                  \\
+		 & \sum^{\not\longrightarrow} |a_\diamond |\land \sum^\longrightarrow a_\diamond  \eqcolon \sum a_\diamond  \mbox{\kaiti 条件收敛}.
+	\end{aligned}
+\]
+
+绝对收敛的级数可以任意改变运算顺序，但条件收敛不可以。
+
+\subsection{函数项级数}
+
+\paragraph{一致收敛}
+
+\[
+\forall \varepsilon >0(\forall x\in\symcal{I} (\exists N(\forall n,m>N(\left\vert f_n(x)-f_m(x) \right\vert<\varepsilon  ))))\eqcolon \sum f_\diamond (x)\mbox{\kaiti 在 \(\symcal{I} \)上一致收敛}  
+.\]
+
+记作 \( \sum f_\diamond (x) \longrightrightarrows f(x)\)。
+
+一致收敛的级数可以交换求和与积分，求导，极限。显然连续函数项的级数若一致收敛，则和函数必然连续。一致收敛是对整个区间而言的，比普通的逐点收敛强。
+
+显然，若 \(\displaystyle f_\diamond(x) \nlongrightrightarrows 0 \)，则 \(\sum^{\snlongrightrightarrows} f_\diamond (x)\)。
+
+\paragraph{内闭一致收敛}
+
+实际上就是在开区间 \(\symcal{I} \) 内的任意一个闭区间上都一致收敛。
+\begin{itemize}
+	\item 比如 \(\sum \diamond \exp (-\diamond ^2x)\) 在 \((0,\infty)\) 上不一致收敛，具体是靠近 \(x=0\) 时收敛速度无限衰减，但在 \((0,\infty)\) 上内闭一致收敛。
+\end{itemize}
+
+\paragraph{Weierstrass判别法}
+\[
+	\sum^\longrightarrow\sup_{x \in\symcal{I} }|f_\diamond (x)| \implies\sum^{\longrightrightarrows}_{x\in\symcal I} f_\diamond (x)  
+.\]
+
+\end{document}
+
+
