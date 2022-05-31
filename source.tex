@@ -18,6 +18,7 @@
 \usepackage{ulem}
 \usepackage{wallpaper}
 
+\renewcommand{\diamond}{i}
 \usetikzlibrary{patterns}
 \tcbuselibrary{skins} 
 \tcbuselibrary{breakable}
@@ -105,8 +106,10 @@
 
 \ThisTileWallPaper{\paperwidth}{\paperheight}{cover.pdf}
 \phantom{d}
+\newpage\thispagestyle{empty}
+\phantom{d}
 \newpage
-
+\setcounter{page}{1}
 
 \subsection{NONSENCE}
 
@@ -115,14 +118,14 @@
 	\forall \varepsilon \left(\exists N\left(\forall n,m>N\left(\left\vert \sum\limits_{m}^{n} a_{\diamond } \right\vert<\varepsilon   \right) \right) \right) \iff \sum a_{\diamond } \longrightarrow a
 	.\]
 
-	为了简写记作 \(\sum^{\longrightarrow} a_{\diamond }\)，
+为了简写记作 \(\sum^{\longrightarrow} a_{\diamond }\)，
 在这里无穷级数的和定义为部分和的极限：
 \[
 	\sum a_{\diamond }\coloneq\lim \sum^n a_{\diamond }
 	.\]
 显然
 \[
-	\lim a_{\diamond }\neq 0\implies\sum ^{\not\longrightarrow}a_{\diamond } 
+	\lim a_{\diamond }\neq 0\implies\sum ^{\not\longrightarrow}a_{\diamond }
 	.\]
 
 \begin{itemize}
@@ -152,12 +155,12 @@
 	\sum^\longrightarrow \frac{1}{\diamond^n },\, \text{iff}\ \Re(n)>1 ,\,\text{otherwise\ }\sum^{\not\longrightarrow } \frac{1}{\diamond^n }
 	.\]
 
-\paragraph{D'Alembert审敛}
+\paragraph{d'Alembert审敛}
 
 若
 \[
 	\begin{aligned}
-		 & \limsup\left|\frac{a_{\diamond +1}}{a_\diamond }\right| <1 \implies\sum ^{ \longrightarrow}a_\diamond, \\
+		 & \limsup\left|\frac{a_{\diamond +1}}{a_\diamond }\right| <1 \implies\sum ^{ \longrightarrow}a_\diamond,    \\
 		 & \liminf\left|\frac{a_{\diamond +1}}{a_\diamond }\right| >1 \implies\sum^{\not\longrightarrow} a_\diamond. \\
 		 & \mbox{\kaiti 否则不能判定}  .
 	\end{aligned}
@@ -167,7 +170,7 @@
 若
 \[
 	\begin{aligned}
-		 & \limsup\left| \sqrt[\diamond ]{a_\diamond }\right|<1\implies \sum^{\longrightarrow} a_\diamond ,  \\
+		 & \limsup\left| \sqrt[\diamond ]{a_\diamond }\right|<1\implies \sum^{\longrightarrow} a_\diamond ,     \\
 		 & \liminf\left| \sqrt[\diamond ]{a_\diamond }\right| >1 \implies\sum^{\not\longrightarrow} a_\diamond, \\
 		 & \mbox{\kaiti 否则不能判定}  .
 	\end{aligned}
@@ -178,8 +181,8 @@
 若
 \[
 	\begin{aligned}
-		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) > 1 \implies\sum^{\longrightarrow} a_\diamond  , \\
-		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) < 1 \implies\sum ^{\not\longrightarrow}a_\diamond,  \\
+		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) > 1 \implies\sum^{\longrightarrow} a_\diamond  ,   \\
+		 & \lim \diamond \left(\left|  \frac{a_\diamond }{a_{\diamond +1}}\right|-1 \right) < 1 \implies\sum ^{\not\longrightarrow}a_\diamond, \\
 		 & \mbox{\kaiti 否则不能判定}  .
 	\end{aligned}
 \]
@@ -194,43 +197,43 @@
 \paragraph{Leibniz审敛}
 
 \[
-	\forall x\geqslant 1	(f(x)\searrow \land f(x)>0\land \lim f(x)=0) \implies \sum  ^\longrightarrow (-)^\diamond f(\diamond ) 
+	\forall x\geqslant 1	(f(x)\searrow \land f(x)>0\land \lim f(x)=0) \implies \sum  ^\longrightarrow (-)^\diamond f(\diamond )
 	.\]
 
 \paragraph{Dirichlet审敛}
 若 \(a_\diamond \)单调，则：
 \[
-\exists M\left( \left\vert \sum^n b_\diamond  \right\vert <M(\lim a_\diamond =0)\right) \implies \sum^\longrightarrow   a_\diamond b_\diamond  
-.\]
+	\exists M\left( \left\vert \sum^n b_\diamond  \right\vert <M(\lim a_\diamond =0)\right) \implies \sum^\longrightarrow   a_\diamond b_\diamond
+	.\]
 
 \paragraph{Abel审敛}
 
 若 \(a_\diamond \)单调，\(\sum ^{\longrightarrow}b_\diamond \) ，则：
 \[
-\exists M(a_\diamond <M)\implies\sum^{\longrightarrow} a_\diamond b_\diamond  .
+	\exists M(a_\diamond <M)\implies\sum^{\longrightarrow} a_\diamond b_\diamond  .
 \]
 
 \paragraph{Ermakov审敛}
 
 \[
-\begin{aligned}
-&\exists F(\forall x>F(f(x)\searrow\land f(x)>0))\land\exists G(\forall x>G(g(x)\nearrow\land g(x)>\land g(x)\in\symcal C^1)) \\ 
-&\implies\exists X\left(\forall x>X\left( \begin{aligned}
- &\frac{f(g)g'}{f}\leqslant q<1\implies\sum^\longrightarrow f(\diamond ) \\ 
-&\frac{f(g)g'}{g} \geqslant 1\implies\sum^{\not\longrightarrow}f(\diamond )
-\end{aligned} \right)  \right) .
-\end{aligned}
+	\begin{aligned}
+		 & \exists F(\forall x>F(f(x)\searrow\land f(x)>0))\land\exists G(\forall x>G(g(x)\nearrow\land g(x)>\land g(x)\in\symcal C^1)) \\
+		 & \implies\exists X\left(\forall x>X\left( \begin{aligned}
+			                                             & \frac{f(g)g'}{f}\leqslant q<1\implies\sum^\longrightarrow f(\diamond )     \\
+			                                             & \frac{f(g)g'}{g} \geqslant 1\implies\sum^{\not\longrightarrow}f(\diamond )
+		                                            \end{aligned} \right)  \right) .
+	\end{aligned}
 \]
 
 \paragraph{Cauthy的凝聚判别}
 
 \[
-\exists N(n>N(a_n\searrow\land a_n\geqslant 0))\implies \sum a_\diamond\,\mbox{\kaiti 与}  \,\sum 2^\diamond a_{2^\diamond } \,\mbox{\kaiti 共敛散} 
-.\]
+	\exists N(n>N(a_n\searrow\land a_n\geqslant 0))\implies \sum a_\diamond\,\mbox{\kaiti 与}  \,\sum 2^\diamond a_{2^\diamond } \,\mbox{\kaiti 共敛散}
+	.\]
 \subsection{绝对与条件收敛}
 \[
 	\begin{aligned}
-		 & \sum^\longrightarrow |a_\diamond |\eqcolon \sum a_\diamond  \mbox{\kaiti 绝对收敛}  ,                                  \\
+		 & \sum^\longrightarrow |a_\diamond |\eqcolon \sum a_\diamond  \mbox{\kaiti 绝对收敛}  ,                                            \\
 		 & \sum^{\not\longrightarrow} |a_\diamond |\land \sum^\longrightarrow a_\diamond  \eqcolon \sum a_\diamond  \mbox{\kaiti 条件收敛}.
 	\end{aligned}
 \]
@@ -242,8 +245,8 @@
 \paragraph{一致收敛}
 
 \[
-\forall \varepsilon >0(\forall x\in\symcal{I} (\exists N(\forall n,m>N(\left\vert f_n(x)-f_m(x) \right\vert<\varepsilon  ))))\eqcolon \sum f_\diamond (x)\mbox{\kaiti 在 \(\symcal{I} \)上一致收敛}  
-.\]
+	\forall \varepsilon >0(\forall x\in\symcal{I} (\exists N(\forall n,m>N(\left\vert f_n(x)-f_m(x) \right\vert<\varepsilon  ))))\eqcolon \sum f_\diamond (x)\mbox{\kaiti 在 \(\symcal{I} \)上一致收敛}
+	.\]
 
 记作 \( \sum f_\diamond (x) \longrightrightarrows f(x)\)。
 
@@ -260,15 +263,15 @@
 
 \paragraph{Weierstrass判别法}
 \[
-	\sum^\longrightarrow\sup_{x \in\symcal{I} }|f_\diamond (x)| \implies\sum^{\slongrightrightarrows}_{x\in\symcal I} f_\diamond (x)  
-.\]
+	\sum^\longrightarrow\sup_{x \in\symcal{I} }|f_\diamond (x)| \implies\sum^{\slongrightrightarrows}_{x\in\symcal I} f_\diamond (x)
+	.\]
 
 \paragraph{Dirichlet判别}
 
 若 \(f_n(x)\) 对 \(n\) 单调
 \[
-\exists M\left(\forall n\left(\forall x\in\symcal{I} \left(\left|\sum^n g_\diamond (x)\right|<M\right)\right)\right)\land f_\diamond (x)\longrightrightarrows 0\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
-.\]
+	\exists M\left(\forall n\left(\forall x\in\symcal{I} \left(\left|\sum^n g_\diamond (x)\right|<M\right)\right)\right)\land f_\diamond (x)\longrightrightarrows 0\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
+	.\]
 
 其中我们称 \(\exists M\left(\forall n\left(\forall x\in\symcal{I} \left(\left|\sum^n g_\diamond (x)\right|<M\right)\right)\right)\) 为 \(g_\diamond (x)\) 的部分和在 \(\symcal{I} \) 上一致有界。
 
@@ -276,8 +279,82 @@
 
 若 \(f_n(x)\) 对 \(n\) 单调且在  \(\symcal{I} \) 上一致有界，则：
 \[
-\sum^{\slongrightrightarrows} b_\diamond (x)\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
-.\]
+	\sum^{\slongrightrightarrows} b_\diamond (x)\implies\sum^{\slongrightrightarrows} f_\diamond(x) g_\diamond (x)
+	.\]
+
+\subsection{幂级数}
+
+\paragraph{Abel第一定理}
+
+\[
+	\sum^\longrightarrow a_\diamond x^\diamond \implies\forall |y|<|x|\left( \sum^\longrightarrow |a_\diamond y^\diamond  |\right)
+	.\]
+
+这意味着幂级数的收敛区域必然是个圆形的（半径可以无穷大也可以是0），否则若圆外有收敛点则可以推出以收敛圆到圆外的区域收敛而得到矛盾，此时收敛圆的半径被称为\textbf{收敛半径}\(R\)，不妨认为收敛圆全是开集（也有可能是闭集）。
+
+因此收敛圆内部绝对收敛，外部发散，圆上另需讨论。
+
+\[
+	\lim \left\vert \frac{a_\diamond }{a_{\diamond +1}} \right\vert =R
+	.\]
+
+如果左边极限存在的话（无穷也行）。
+
+另外的一件事是：
+\[
+	\forall x\in U_R(0)\left(  \sum^{\slongrightrightarrows} a_\diamond x^\diamond\right)
+	.\]
+
+这意味着在收敛圆内部，幂级数\textbf{内闭一致收敛}（要注意到收敛圆上的点上的收敛速度可能无限慢甚至发散）。同时也在收敛圆上解析。
+
+\paragraph{Taylor级数}
+
+\[
+	\sum a_\diamond x^\diamond \longrightarrow f(x)\implies a_n= \frac{\symscr{D} ^n(f)|_{0}}{n!}
+	.\]
+
+这意味着我们能对一些函数进行级数展开，此处不讨论什么东西能展。
+
+\[
+	\begin{aligned}
+		 & \symrm{e} ^x=\sum_0 \frac{x^\diamond }{\diamond !},                     & R=\infty,                                                            \\
+		 & \sin x=\sum_0 (-)^{\diamond } \frac{x^{2\diamond +1}}{(2\diamond +1)!}, & R=\infty,                                                            \\
+		 & \cos x=\sum_0 (-)^\diamond \frac{x^{2\diamond }}{(2\diamond )!},        & R=\infty,                                                            \\
+		 & \arctan x =\sum_0(-)^\diamond  \frac{x^{2\diamond +1}}{2\diamond +1},   & R=1,x\neq \pm\symrm{i} ,                                             \\
+		 & \ln (1+x)=\sum_1 (-)^{\diamond-1} \frac{x^\diamond }{\diamond },        & R=1,x\neq -1,                                                        \\
+		 & (1+x)^a=\sum_0 \dbinom{a}{\diamond }x^\diamond ,                        & \text{if}\ a\in\symbb{N} ^+,R=\infty,\text{otherwise}\ R=1,x\neq -1, \\
+	\end{aligned}
+\]
+
+\subsection{一些奇怪的话}
+
+\paragraph{二重级数}
+\[
+	\left( \sum a_\diamond \right) \cdot \left(  \sum b_\diamond \right)  \eqcolon \Bbbsum a_i b_j
+	.\]
+
+同理，二重级数也有绝对收敛/一致收敛/条件收敛等概念，此处不在阐述（往后默认绝对收敛）。
+
+\paragraph{Mertens定理}
+\[
+	\Bbbsum^\longrightarrow |a_i b_j| \implies \Bbbsum^\longrightarrow a_i b_j=\sum_i \sum^i_j a_i b_{i-j}
+	.\]
+
+这实际上是将二重级数矩形排列后沿对角线求和（由于绝对收敛的级数可以交换求和）。
+
+\subsection{一些例题}
+
+这里的例题以计算为主，对严谨性\textbf{完全不会涉及}。
+
+\paragraph{审敛}
+\begin{enumerate}
+	\item \(\sum \frac{1}{\diamond \ln \diamond }\)
+	      发散；由于 \(\int^\infty \frac{\symrm{d} x}{x \ln x}\sim \ln \ln x\to\infty\)。
+	\item \(\sum \frac{1}{\diamond (\ln \ln \diamond )^q}\)
+	      发散；由于\(\forall n>\left\lceil\symrm{e} ^{\symrm{e} ^{q^2 }} \right\rceil \implies (\ln \ln n)^q<\ln n\implies\sum \frac{1}{\diamond (\ln \ln \diamond )^q}>\sum \frac{1}{n \ln n}\)。
+		  \item 
+\end{enumerate}
+
 \end{document}
 
 
